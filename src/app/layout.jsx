@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import { UserInfo } from "../components/UserInfo";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 
 import "./globals.css";
 import Link from "next/link";
@@ -32,6 +35,7 @@ export default async function RootLayout({ children }) {
             </div>
           </header>
           <main className="max-w-screen-xl lg:mx-auto">{children}</main>
+          <ToastContainer />
         </Providers>
       </body>
     </html>

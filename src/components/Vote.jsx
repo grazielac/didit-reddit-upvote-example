@@ -15,7 +15,7 @@ async function getExistingVote(userId, postId) {
 async function handleVote(userId, postId, newVote) {
   // Check if the user has already voted on this post
   if (!userId) {
-    alert("Sign up to vote");
+    throw new Error("Sign up to vote");
   }
 
   const existingVote = await getExistingVote(userId, postId);
